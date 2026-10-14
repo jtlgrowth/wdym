@@ -8,7 +8,7 @@ import { join, resolve } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import {
   SKILL_DIR, loadConfig, loadRules, triage, clip, readRows, cardAnswer, shownReading, verdictOf,
-  hook, render, isHeadless, codexExec, score, tune, coach, loadTerms, matchTerms, termsSheet, loadTargets, fillTarget,
+  hook, render, isHeadless, codexExec, score, tune, coach, loadTerms, matchTerms, termsSheet, loadTargets, parseTargets, fillTarget,
   loadGolden, evaluate,
 } from '../scripts/wdym.mjs';
 
@@ -301,6 +301,14 @@ test('learn-term: a learned phrase wins outright', () => {
 });
 
 // --------------------------------------------------------------- target ----
+test('target: a CRLF checkout still parses every target', () => {
+  const lf = readFileSync(join(SKILL_DIR, 'references', 'targets.md'), 'utf8');
+  const sections = (lf.match(/^## /gm) || []).length;
+  const crlf = lf.replace(/\r?\n/g, '\r\n');
+  assert.equal(Object.keys(parseTargets(lf)).length, sections);
+  assert.deepEqual(parseTargets(crlf), parseTargets(lf));
+});
+
 test('target: every bundled target fills a brief and marks gaps', () => {
   const t = loadTargets(null);
   assert.ok(Object.keys(t).length >= 6);

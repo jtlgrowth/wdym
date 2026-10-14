@@ -368,7 +368,6 @@ export function isHeadless(payload, rules, env = process.env, { engine = 'claude
 // (checked on codex-cli 0.162: the hook sees the same env as in the TUI). The hook's ancestors
 // name the command, so walk them. Windows has no ps: never headless there by this rule.
 export function codexExec(pid = process.ppid, table = psTable) {
-  if (IS_WIN) return false;
   const rows = table();
   for (let i = 0, p = pid; i < 8 && p > 1; i++) {
     const row = rows.get(p);
@@ -379,8 +378,10 @@ export function codexExec(pid = process.ppid, table = psTable) {
   return false;
 }
 
+// Windows has no ps; an empty table reads as not exec, and WDYM_HEADLESS covers unattended runs there.
 function psTable() {
   const rows = new Map();
+  if (IS_WIN) return rows;
   try {
     const out = spawnSync('ps', ['-A', '-o', 'pid=,ppid=,args='], { encoding: 'utf8', timeout: 400 }).stdout || '';
     for (const l of out.split('\n')) {
@@ -566,14 +567,20 @@ export function recent({ dir = '.', hours = 48, extra = [], max = 10 } = {}) {
 
 // --------------------------------------------------------------- target ----
 export function loadTargets(cfg) {
-  const md = readFileSync(join(REF, 'targets.md'), 'utf8');
+  const out = parseTargets(readFileSync(join(REF, 'targets.md'), 'utf8'));
+  for (const [id, tpl] of Object.entries(readJson(cfg?.pack ? join(cfg.pack, 'pack.json') : '', {})?.targets || {})) out[id] = tpl;
+  return out;
+}
+
+export function parseTargets(text) {
+  // A Windows checkout with autocrlf turns every newline into CRLF; the parser below expects LF.
+  const md = String(text).replace(/\r\n/g, '\n');
   const out = {};
   for (const sec of md.split(/^## /m).slice(1)) {
     const id = sec.split('\n')[0].trim().toLowerCase();
     const m = /```text\n([\s\S]*?)```/.exec(sec);
     if (id && m) out[id] = m[1].trim();
   }
-  for (const [id, tpl] of Object.entries(readJson(cfg?.pack ? join(cfg.pack, 'pack.json') : '', {})?.targets || {})) out[id] = tpl;
   return out;
 }
 
