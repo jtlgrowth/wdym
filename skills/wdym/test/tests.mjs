@@ -2,7 +2,7 @@
 // Every test that writes uses its own temp config, so nothing touches the real ~/.jtl.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { mkdtempSync, writeFileSync, appendFileSync, readFileSync, existsSync, readdirSync } from 'node:fs';
+import { mkdtempSync, writeFileSync, appendFileSync, readFileSync, existsSync, readdirSync, statSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { spawnSync } from 'node:child_process';
@@ -167,6 +167,14 @@ test('hook: off means silent and no ledger', () => {
   const { cfg } = sandbox();
   assert.equal(hook({ prompt: 'make it better', session_id: 's5' }, { ...cfg, off: true }, { env: CLEAN }), '');
   assert.equal(readRows(cfg.ledger).length, 0);
+});
+
+test('hook: the ledger and state are owner-only', (t) => {
+  if (process.platform === 'win32') return t.skip('POSIX modes');
+  const { cfg } = sandbox();
+  hook({ prompt: 'make it better', session_id: 'perm' }, cfg, { env: CLEAN });
+  assert.equal(statSync(cfg.ledger).mode & 0o077, 0);
+  for (const f of readdirSync(cfg.stateDir)) assert.equal(statSync(join(cfg.stateDir, f)).mode & 0o077, 0);
 });
 
 test('hook: budget blocks a second card in a row', () => {

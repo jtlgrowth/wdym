@@ -164,8 +164,9 @@ export function clip(s, n = 160) {
 function newId(prefix) { return `${prefix}-${Date.now().toString(36)}${Math.random().toString(36).slice(2, 5)}`; }
 
 export function appendRow(ledger, row) {
-  mkdirSync(dirname(ledger), { recursive: true });
-  appendFileSync(ledger, JSON.stringify({ v: 1, ts: new Date().toISOString(), ...row }) + '\n');
+  // Owner-only: the ledger holds excerpts of the user's prompts.
+  mkdirSync(dirname(ledger), { recursive: true, mode: 0o700 });
+  appendFileSync(ledger, JSON.stringify({ v: 1, ts: new Date().toISOString(), ...row }) + '\n', { mode: 0o600 });
 }
 
 export function readRows(ledger, { days = null } = {}) {
@@ -187,8 +188,8 @@ const sid = (s) => String(s || 'nosession').replace(/[^A-Za-z0-9_-]/g, '').slice
 function statePath(cfg, session) { return join(cfg.stateDir, `${sid(session)}.json`); }
 function loadState(cfg, session) { return readJson(statePath(cfg, session), null) || { open: null, recent: [] }; }
 function saveState(cfg, session, st) {
-  mkdirSync(cfg.stateDir, { recursive: true });
-  writeFileSync(statePath(cfg, session), JSON.stringify(st));
+  mkdirSync(cfg.stateDir, { recursive: true, mode: 0o700 });
+  writeFileSync(statePath(cfg, session), JSON.stringify(st), { mode: 0o600 });
 }
 
 export function transcriptSize(path) {
