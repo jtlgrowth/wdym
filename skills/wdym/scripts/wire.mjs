@@ -199,13 +199,17 @@ export function doctorRows(cfg, { env = process.env, home = homedir(), hosts = H
 
 // ----------------------------------------------------------------- thanks ----
 // Printed once apply ends green, public edition only. Links only: nothing is starred or followed
-// for the user, and nothing is fetched.
+// for the user, and nothing is fetched. Codex's one-time approval is the user's step, not a failed
+// install, so it does not hold the links back.
 export const REPO_URL = 'https://github.com/jtlgrowth/wdym';
+const USER_STEP = 'codex hook approved';
 export function thanksLines(cfg, rows, bad) {
-  if ((cfg.edition || 'public') !== 'public' || bad || rows.some(r => r.ok === false)) return [];
+  if ((cfg.edition || 'public') !== 'public' || bad || rows.some(r => r.ok === false && r.name !== USER_STEP)) return [];
+  const approve = rows.some(r => r.ok === false && r.name === USER_STEP);
   return [
     '',
-    'wdym is live. Open a new session and type something vague to see the card.',
+    approve ? 'wdym is wired. Approve its hook in Codex once (the row above), then type something vague.'
+      : 'wdym is live. Open a new session and type something vague to see the card.',
     '',
     'If it saves you one wrong build:',
     `  Star the repo     ${REPO_URL}`,

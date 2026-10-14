@@ -121,6 +121,8 @@ test('wire: a green apply ends on the star and follow links; red, or a pack edit
   assert.deepEqual(thanksLines({ edition: 'public' }, [{ name: 'claude skill', ok: false }], 0), []);
   assert.deepEqual(thanksLines({ edition: 'public' }, green, 1), [], 'a failed first win prints no thanks');
   assert.deepEqual(thanksLines({ edition: 'team' }, green, 0), []);
+  const codexPending = thanksLines({ edition: 'public' }, [...green, { name: 'codex hook approved', ok: false }], 0);
+  assert.ok(codexPending.join('\n').includes(REPO_URL) && /Approve its hook in Codex/.test(codexPending[1]), 'Codex approval is his step, not a failed install');
 
   // The real command in a fake home: HOME only, so no real host is touched.
   const { home } = fakeHome();
