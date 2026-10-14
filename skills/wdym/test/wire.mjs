@@ -4,7 +4,8 @@ import assert from 'node:assert/strict';
 import { mkdtempSync, mkdirSync, writeFileSync, readFileSync, existsSync, lstatSync, symlinkSync, realpathSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { applyHost, removeHost, inspect, doctorRows, firstWin, codexTrusted, hookFile, hookCommand, SKILL_DIR } from '../scripts/wire.mjs';
+import { spawnSync } from 'node:child_process';
+import { applyHost, removeHost, inspect, doctorRows, firstWin, codexTrusted, hookFile, hookCommand, thanksLines, REPO_URL, SKILL_DIR } from '../scripts/wire.mjs';
 
 // HOME only: CLAUDE_CONFIG_DIR, CODEX_HOME and HERMES_HOME are left out on purpose, or the test
 // would wire the real hosts of whoever runs it.
@@ -111,6 +112,23 @@ test('wire: pack glue means no second Claude hook, and doctor checks the glue', 
   assert.equal(doctorRows(pack, { env, home, hosts: ['claude'] }).find(r => r.name === 'claude prompt hook').ok, false);
   applyHost('hermes', pack, { env, home });
   assert.ok(existsSync(join(home, '.hermes', 'skills', 'team', 'wdym', 'SKILL.md')));
+});
+
+test('wire: a green apply ends on the star and follow links; red, or a pack edition, prints none', () => {
+  const green = [{ name: 'claude skill', ok: true }, { name: 'hermes skill', ok: null }];
+  const text = thanksLines({ edition: 'public' }, green, 0).join('\n');
+  assert.ok(text.includes(REPO_URL) && text.includes('instagram.com/jtlgrowth') && text.includes('facebook.com/jtlgrowth'), text);
+  assert.deepEqual(thanksLines({ edition: 'public' }, [{ name: 'claude skill', ok: false }], 0), []);
+  assert.deepEqual(thanksLines({ edition: 'public' }, green, 1), [], 'a failed first win prints no thanks');
+  assert.deepEqual(thanksLines({ edition: 'team' }, green, 0), []);
+
+  // The real command in a fake home: HOME only, so no real host is touched.
+  const { home } = fakeHome();
+  const r = spawnSync(process.execPath, [join(SKILL_DIR, 'scripts', 'wire.mjs'), 'apply', '--host', 'claude'],
+    { encoding: 'utf8', env: { HOME: home, PATH: process.env.PATH || '' }, timeout: 20000 });
+  assert.equal(r.status, 0, r.stdout + r.stderr);
+  assert.ok(r.stdout.trimEnd().endsWith('https://www.facebook.com/jtlgrowth'), r.stdout);
+  assert.ok(r.stdout.indexOf('All required items are green.') < r.stdout.indexOf(REPO_URL), 'links come after the doctor rows');
 });
 
 test('wire: a relative --config becomes absolute in the hook command', () => {

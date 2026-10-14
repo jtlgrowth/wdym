@@ -197,6 +197,24 @@ export function doctorRows(cfg, { env = process.env, home = homedir(), hosts = H
   return rows;
 }
 
+// ----------------------------------------------------------------- thanks ----
+// Printed once apply ends green, public edition only. Links only: nothing is starred or followed
+// for the user, and nothing is fetched.
+export const REPO_URL = 'https://github.com/jtlgrowth/wdym';
+export function thanksLines(cfg, rows, bad) {
+  if ((cfg.edition || 'public') !== 'public' || bad || rows.some(r => r.ok === false)) return [];
+  return [
+    '',
+    'wdym is live. Open a new session and type something vague to see the card.',
+    '',
+    'If it saves you one wrong build:',
+    `  Star the repo     ${REPO_URL}`,
+    '  Follow JTL Growth for the next free tools:',
+    '    Instagram       https://www.instagram.com/jtlgrowth',
+    '    Facebook        https://www.facebook.com/jtlgrowth',
+  ];
+}
+
 // ------------------------------------------------------------------- main ----
 function hostsFrom(flags) {
   if (!flags.host || flags.host === 'all') return HOSTS;
@@ -231,7 +249,12 @@ function main(argv = process.argv.slice(2)) {
       log(`  ${h}: first win ${w.ok ? 'ok' : 'FAILED'} (${w.detail})`);
       bad += !w.ok;
     }
-    if (cmd === 'apply') { printRows(doctorRows(cfg, { hosts })); return bad ? 1 : 0; }
+    if (cmd === 'apply') {
+      const rows = doctorRows(cfg, { hosts });
+      printRows(rows);
+      for (const line of thanksLines(cfg, rows, bad)) log(line);
+      return bad ? 1 : 0;
+    }
   }
   if (cmd === 'doctor') {
     const rows = doctorRows(cfg, { hosts });

@@ -40,6 +40,8 @@ node skills/wdym/scripts/wire.mjs doctor   # every row ok = live
 
 Keep the folder where you cloned it: the skill is linked, not copied. `apply` is safe to run
 twice. Tested on macOS; CI runs Linux, macOS and Windows on every push (badge above).
+A green `apply` ends with links to star the repo and follow JTL Growth; it never stars or
+follows anything for you.
 
 **Codex:** Codex runs a new hook only after you approve it once. Start Codex, approve the
 hook running `wdym.mjs hook`, and `doctor` turns green.
@@ -136,3 +138,7 @@ changes is listed in [SECURITY.md](SECURITY.md).
 
 MIT. Made by [JTL Growth](https://github.com/jtlgrowth). Also listed in the
 [JTL toolkit](https://github.com/jtlgrowth/jtl).
+
+If wdym saves you a wrong build, star this repo and follow JTL Growth on
+[Instagram](https://www.instagram.com/jtlgrowth) and [Facebook](https://www.facebook.com/jtlgrowth)
+for the next free tools.
