@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace-manifest.json",
+  "name": "wdym",
+  "owner": {
+    "name": "jtlgrowth",
+    "url": "https://github.com/jtlgrowth"
+  },
+  "description": "wdym: read what you mean before the work runs.",
+  "plugins": [
+    {
+      "name": "wdym",
+      "source": "./",
+      "description": "Reads a vague prompt before the work runs: one card with a rewritten brief, then the build. Clear prompts run untouched. Learns which phrasings it misreads for you. Zero dependencies.",
+      "license": "MIT",
+      "keywords": [
+        "prompts",
+        "clarify",
+        "intent",
+        "hooks",
+        "claude-code",
+        "codex",
+        "skills"
+      ]
+    }
+  ]
+}

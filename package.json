@@ -1,0 +1,14 @@
+{
+  "name": "wdym",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Reads a vague prompt before the work runs: one card with a rewritten brief, then the build. Clear prompts run untouched. Learns which phrasings it misreads for you. Zero dependencies.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test skills/wdym/test/tests.mjs skills/wdym/test/wire.mjs",
+    "eval": "node skills/wdym/scripts/wdym.mjs eval --split all"
+  }
+}

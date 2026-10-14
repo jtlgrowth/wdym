@@ -1,0 +1,955 @@
+{
+ "version": 1,
+ "terms": [
+  {
+   "id": "parallax",
+   "term": "Parallax scroll",
+   "category": "motion",
+   "says": [
+    "background moves slower than the page",
+    "layers move at different speeds",
+    "depth when i scroll",
+    "the back part scrolls slower than the front"
+   ],
+   "one_line": "Layers scroll at different speeds so the page feels deep.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='10' y='8' width='100' height='64'/><path d='M10 50L40 28L65 50Z' fill='#eee' stroke='#bbb'/><rect x='10' y='56' width='100' height='16' fill='#111'/><path d='M30 46L30 36M32.4 40.4L30 36L27.6 40.4'/><path d='M90 66L90 30M92.4 34.4L90 30L87.6 34.4'/></svg>"
+  },
+  {
+   "id": "sticky-scroll",
+   "term": "Sticky scroll",
+   "category": "motion",
+   "says": [
+    "one part stays in place while the rest scrolls",
+    "it sticks while i scroll",
+    "stays on screen then the next thing slides in",
+    "pinned section while scrolling"
+   ],
+   "one_line": "One block stays pinned while other content scrolls past it.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='10' y='14' width='40' height='52' fill='#111'/><rect x='60' y='10' width='50' height='18' fill='#eee' stroke='#bbb'/><rect x='60' y='34' width='50' height='18' fill='#eee' stroke='#bbb'/><rect x='60' y='58' width='50' height='14' fill='#eee' stroke='#bbb'/><path d='M115 60L115 16M117.4 20.4L115 16L112.6 20.4'/></svg>"
+  },
+  {
+   "id": "scroll-reveal",
+   "term": "Scroll-triggered reveal",
+   "category": "motion",
+   "says": [
+    "things appear as i scroll down",
+    "fades in when i scroll to it",
+    "content pops in while scrolling",
+    "shows up when it comes into view"
+   ],
+   "one_line": "Elements fade or slide in as they scroll into view.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='15' y='8' width='90' height='14' fill='#111'/><rect x='15' y='30' width='90' height='14' fill='#bbb'/><rect x='15' y='52' width='90' height='14' fill='#eee' stroke='#bbb'/><path d='M110 70L110 50M112.4 54.4L110 50L107.6 54.4'/><path d='M60 74L60 74'/></svg>"
+  },
+  {
+   "id": "float",
+   "term": "Float animation",
+   "category": "motion",
+   "says": [
+    "the card kind of floats",
+    "it bobs up and down slowly",
+    "hovers in the air",
+    "gently moves up and down by itself",
+    "floating effect"
+   ],
+   "one_line": "An element drifts gently up and down in a loop.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='34' y='34' width='52' height='30' rx='4' fill='#eee' stroke='#bbb'/><rect x='34' y='24' width='52' height='30' rx='4'/><path d='M100 52L100 20M102.4 24.4L100 20L97.6 24.4'/><path d='M100 28L100 60M97.6 55.6L100 60L102.4 55.6'/><path d='M40 68L80 68' stroke='#bbb'/></svg>"
+  },
+  {
+   "id": "marquee",
+   "term": "Marquee",
+   "category": "motion",
+   "says": [
+    "text that keeps scrolling sideways",
+    "logos sliding across non stop",
+    "scrolling ticker banner",
+    "endless strip that moves left"
+   ],
+   "one_line": "A strip of text or logos scrolls sideways in an endless loop.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='6' y='28' width='108' height='24'/><rect x='14' y='36' width='14' height='8' fill='#111'/><rect x='36' y='36' width='14' height='8' fill='#111'/><rect x='58' y='36' width='14' height='8' fill='#eee' stroke='#bbb'/><rect x='80' y='36' width='14' height='8' fill='#eee' stroke='#bbb'/><path d='M100 66L20 66M24.4 63.6L20 66L24.4 68.4'/></svg>"
+  },
+  {
+   "id": "stagger",
+   "term": "Stagger animation",
+   "category": "motion",
+   "says": [
+    "items show up one after another",
+    "each one appears a little later than the last",
+    "cascade in one by one",
+    "they pop in in a wave"
+   ],
+   "one_line": "Items animate in one after another with a small delay between each.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='10' y='56' width='14' height='14' fill='#111'/><rect x='30' y='46' width='14' height='24' fill='#bbb'/><rect x='50' y='34' width='14' height='36' fill='#eee' stroke='#bbb'/><rect x='70' y='22' width='14' height='48' fill='#eee' stroke='#bbb'/><rect x='90' y='10' width='14' height='60' fill='#eee' stroke='#bbb'/><path d='M10 8L100 8M95.6 10.4L100 8L95.6 5.6'/></svg>"
+  },
+  {
+   "id": "morph",
+   "term": "Morph transition",
+   "category": "motion",
+   "says": [
+    "one shape turns into another",
+    "it melts into a different shape",
+    "transforms smoothly into something else",
+    "blob changing shape"
+   ],
+   "one_line": "One shape smoothly changes into a different one.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='12' y='24' width='30' height='30'/><circle cx='88' cy='40' r='16'/><path d='M48 40L68 40M63.6 42.4L68 40L63.6 37.6'/><path d='M52 24Q64 16 72 24' stroke='#bbb'/></svg>"
+  },
+  {
+   "id": "page-transition",
+   "term": "Page transition",
+   "category": "motion",
+   "says": [
+    "smooth change between pages",
+    "the page slides away when i click a link",
+    "fade when going to another page",
+    "no hard cut between pages"
+   ],
+   "one_line": "An animated change when moving from one page to the next.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='10' y='14' width='50' height='52' fill='#eee' stroke='#bbb'/><rect x='40' y='14' width='50' height='52'/><path d='M70 72L108 72M103.6 74.4L108 72L103.6 69.6'/><rect x='94' y='14' width='16' height='52' fill='#111'/></svg>"
+  },
+  {
+   "id": "hover-lift",
+   "term": "Hover lift",
+   "category": "motion",
+   "says": [
+    "the card goes up when my mouse is on it",
+    "pops up on hover",
+    "button rises when i hover",
+    "gets bigger and a shadow when hovering"
+   ],
+   "one_line": "An element rises and gains a shadow when the pointer is over it.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='30' y='38' width='60' height='30' rx='4' fill='#eee' stroke='#bbb'/><rect x='30' y='26' width='60' height='30' rx='4' fill='#fff'/><path d='M104 56L104 22M106.4 26.4L104 22L101.6 26.4'/><path d='M34 72L90 72' stroke='#bbb'/></svg>"
+  },
+  {
+   "id": "micro-interaction",
+   "term": "Micro-interaction",
+   "category": "motion",
+   "says": [
+    "tiny reaction when i click something",
+    "the heart pops when i like it",
+    "small feedback animation",
+    "little bounce on a button press"
+   ],
+   "one_line": "A tiny animated reaction that confirms what you just did.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M60 62L38 40Q30 28 42 22Q52 20 60 32Q68 20 78 22Q90 28 82 40Z'/><path d='M60 8L60 14' stroke='#bbb'/><path d='M36 12L40 17' stroke='#bbb'/><path d='M84 12L80 17' stroke='#bbb'/></svg>"
+  },
+  {
+   "id": "skeleton",
+   "term": "Skeleton loading",
+   "category": "motion",
+   "says": [
+    "grey boxes while the page loads",
+    "placeholder shapes before the content shows",
+    "loading blocks that shimmer",
+    "empty gray bars while waiting"
+   ],
+   "one_line": "Grey placeholder shapes hold the layout while content loads.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='10' y='10' width='30' height='30' rx='15' fill='#eee' stroke='#bbb'/><rect x='48' y='12' width='60' height='8' rx='2' fill='#eee' stroke='#bbb'/><rect x='48' y='28' width='40' height='8' rx='2' fill='#eee' stroke='#bbb'/><rect x='10' y='50' width='98' height='8' rx='2' fill='#eee' stroke='#bbb'/><rect x='10' y='64' width='70' height='8' rx='2' fill='#eee' stroke='#bbb'/></svg>"
+  },
+  {
+   "id": "typewriter",
+   "term": "Typewriter effect",
+   "category": "motion",
+   "says": [
+    "text types itself out letter by letter",
+    "words appear like someone is typing",
+    "letters show one at a time",
+    "typing animation"
+   ],
+   "one_line": "Text appears one letter at a time like it is being typed.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='10' y='24' width='8' height='8' fill='#111'/><rect x='22' y='24' width='8' height='8' fill='#111'/><rect x='34' y='24' width='8' height='8' fill='#111'/><rect x='46' y='24' width='8' height='8' fill='#eee' stroke='#bbb'/><rect x='58' y='24' width='8' height='8' fill='#eee' stroke='#bbb'/><rect x='76' y='20' width='4' height='18' fill='#111'/><rect x='10' y='48' width='8' height='8' fill='#111'/><rect x='22' y='48' width='8' height='8' fill='#111'/><rect x='34' y='48' width='8' height='8' fill='#eee' stroke='#bbb'/></svg>"
+  },
+  {
+   "id": "count-up",
+   "term": "Count-up number",
+   "category": "motion",
+   "says": [
+    "numbers that count up fast",
+    "the stat rolls up to the final number",
+    "counter that climbs",
+    "numbers tick up when i scroll to them"
+   ],
+   "one_line": "A number counts up from zero to its final value.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M30 20L30 60M30 20L22 28'/><path d='M50 20L50 60'/><path d='M70 20H90V40H70V60H90'/><path d='M104 62L104 16M106.4 20.4L104 16L101.6 20.4'/><path d='M12 70L108 70' stroke='#bbb'/></svg>"
+  },
+  {
+   "id": "lottie",
+   "term": "Lottie animation",
+   "category": "motion",
+   "says": [
+    "small animated illustration",
+    "a little cartoon that moves",
+    "animated icon that loops",
+    "vector animation not a video"
+   ],
+   "one_line": "A lightweight vector animation that loops inside the page.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='60' cy='40' r='22' fill='#eee' stroke='#bbb'/><circle cx='60' cy='40' r='22'/><path d='M50 40L58 48L72 32'/><path d='M26 16Q18 40 26 64' stroke='#bbb'/><path d='M94 16Q102 40 94 64' stroke='#bbb'/></svg>"
+  },
+  {
+   "id": "scroll-snap",
+   "term": "Scroll snap",
+   "category": "motion",
+   "says": [
+    "it clicks into place when i scroll",
+    "each section locks in full screen",
+    "scrolls one screen at a time",
+    "snaps to the next section"
+   ],
+   "one_line": "Scrolling clicks neatly into place one section at a time.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='24' y='6' width='72' height='68'/><path d='M24 40L96 40' stroke='#bbb'/><path d='M108 20L108 60M105.6 55.6L108 60L110.4 55.6'/><path d='M24 40L24 40'/><rect x='30' y='12' width='60' height='22' fill='#111'/><rect x='30' y='46' width='60' height='22' fill='#eee' stroke='#bbb'/></svg>"
+  },
+  {
+   "id": "kinetic-type",
+   "term": "Kinetic typography",
+   "category": "motion",
+   "says": [
+    "words that move and bounce",
+    "text animated like a title sequence",
+    "letters that wiggle or fly in",
+    "moving text as the main design"
+   ],
+   "one_line": "Text that moves, scales or bounces as a main visual.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='14' y='30' width='12' height='30' fill='#111'/><rect x='32' y='22' width='12' height='38' fill='#111'/><rect x='50' y='36' width='12' height='24' fill='#eee' stroke='#bbb'/><rect x='68' y='26' width='12' height='34' fill='#111'/><rect x='86' y='40' width='12' height='20' fill='#eee' stroke='#bbb'/><path d='M20 14L38 14M33.6 16.4L38 14L33.6 11.6'/><path d='M60 70L92 70M87.6 72.4L92 70L87.6 67.6'/></svg>"
+  },
+  {
+   "id": "magnetic-button",
+   "term": "Magnetic button",
+   "category": "motion",
+   "says": [
+    "button pulls toward my mouse",
+    "the button follows the cursor a bit",
+    "sticky button that leans to the pointer",
+    "it gets drawn to my cursor"
+   ],
+   "one_line": "A button leans toward the pointer as it gets close.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='24' y='30' width='50' height='22' rx='11' fill='#eee' stroke='#bbb'/><rect x='34' y='30' width='50' height='22' rx='11'/><path d='M96 14L96 36L103 31L108 40L112 38L107 30L115 29Z' fill='#111'/><path d='M92 44L86 42M90.9 41.1L86 42L89.4 45.7'/></svg>"
+  },
+  {
+   "id": "cursor-follower",
+   "term": "Cursor follower",
+   "category": "motion",
+   "says": [
+    "a circle that follows my mouse",
+    "something trails behind the pointer",
+    "custom cursor that lags behind",
+    "blob chasing the mouse"
+   ],
+   "one_line": "A shape trails the pointer around the screen.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='30' cy='52' r='5' fill='#eee' stroke='#bbb'/><circle cx='46' cy='44' r='7' fill='#eee' stroke='#bbb'/><circle cx='66' cy='34' r='10'/><path d='M84 14L84 36L91 31L96 40L100 38L95 30L103 29Z' fill='#111'/></svg>"
+  },
+  {
+   "id": "smooth-scroll",
+   "term": "Smooth scroll",
+   "category": "motion",
+   "says": [
+    "scrolling feels buttery",
+    "the scroll glides instead of jumping",
+    "page eases when i scroll",
+    "soft inertia scrolling"
+   ],
+   "one_line": "Scrolling glides and eases instead of jumping.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='30' y='6' width='60' height='68'/><path d='M12 70Q12 40 20 10'/><path d='M100 70L100 10M102.4 14.4L100 10L97.6 14.4'/><path d='M38 18L82 18' stroke='#bbb'/><path d='M38 30L82 30' stroke='#bbb'/><path d='M38 42L82 42' stroke='#bbb'/><path d='M38 54L68.8 54' stroke='#bbb'/><path d='M100 70L100 70'/></svg>"
+  },
+  {
+   "id": "bento-grid",
+   "term": "Bento grid",
+   "category": "layout",
+   "says": [
+    "boxes of different sizes fitted together",
+    "like a lunchbox grid",
+    "tiles in mixed sizes",
+    "apple style feature boxes"
+   ],
+   "one_line": "Tiles of mixed sizes fit together like a bento box.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='8' y='8' width='56' height='36' rx='4' fill='#111'/><rect x='70' y='8' width='42' height='16' rx='4' fill='#eee' stroke='#bbb'/><rect x='70' y='28' width='42' height='16' rx='4' fill='#eee' stroke='#bbb'/><rect x='8' y='50' width='28' height='22' rx='4' fill='#eee' stroke='#bbb'/><rect x='42' y='50' width='36' height='22' rx='4' fill='#eee' stroke='#bbb'/><rect x='84' y='50' width='28' height='22' rx='4' fill='#111'/></svg>"
+  },
+  {
+   "id": "masonry",
+   "term": "Masonry layout",
+   "category": "layout",
+   "says": [
+    "pinterest style columns",
+    "pictures of different heights stacked",
+    "cards that fill gaps like bricks",
+    "uneven columns"
+   ],
+   "one_line": "Cards of different heights stack in tight columns with no gaps.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='8' y='8' width='32' height='28' rx='3' fill='#eee' stroke='#bbb'/><rect x='8' y='42' width='32' height='30' rx='3' fill='#eee' stroke='#bbb'/><rect x='44' y='8' width='32' height='40' rx='3' fill='#eee' stroke='#bbb'/><rect x='44' y='52' width='32' height='20' rx='3' fill='#eee' stroke='#bbb'/><rect x='80' y='8' width='32' height='22' rx='3' fill='#eee' stroke='#bbb'/><rect x='80' y='34' width='32' height='38' rx='3' fill='#eee' stroke='#bbb'/></svg>"
+  },
+  {
+   "id": "hero",
+   "term": "Hero section",
+   "category": "layout",
+   "says": [
+    "the big part at the very top of the page",
+    "large banner with headline",
+    "first big thing you see",
+    "big headline and button on top"
+   ],
+   "one_line": "The big opening section with the headline and main button.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='8' y='8' width='104' height='64'/><rect x='20' y='20' width='50' height='8' fill='#111'/><rect x='20' y='32' width='36' height='8' fill='#111'/><rect x='20' y='50' width='26' height='10' rx='5' fill='#111'/><rect x='76' y='20' width='28' height='40' fill='#eee' stroke='#bbb'/></svg>"
+  },
+  {
+   "id": "split-screen",
+   "term": "Split screen",
+   "category": "layout",
+   "says": [
+    "page cut in two halves",
+    "half picture half text",
+    "two sides next to each other",
+    "left and right panels"
+   ],
+   "one_line": "The screen is divided into two equal halves.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='8' y='8' width='104' height='64'/><rect x='8' y='8' width='52' height='64' fill='#111'/><path d='M60 8L60 72' stroke='#111'/><path d='M68 28L104 28' stroke='#bbb'/><path d='M68 38L104 38' stroke='#bbb'/><path d='M68 48L93.2 48' stroke='#bbb'/></svg>"
+  },
+  {
+   "id": "full-bleed",
+   "term": "Full-bleed",
+   "category": "layout",
+   "says": [
+    "image goes all the way to the edges",
+    "no margins on the picture",
+    "edge to edge",
+    "photo fills the whole width"
+   ],
+   "one_line": "An image or section stretches to the very edges of the screen.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='4' y='6' width='112' height='68'/><rect x='4' y='18' width='112' height='38' fill='#eee' stroke='#bbb'/><path d='M14 37L4 37M8.4 34.6L4 37L8.4 39.4'/><path d='M106 37L116 37M111.6 39.4L116 37L111.6 34.6'/><path d='M4 56L36 32L60 48L84 28L116 56Z' fill='#bbb'/></svg>"
+  },
+  {
+   "id": "card-grid",
+   "term": "Card grid",
+   "category": "layout",
+   "says": [
+    "a bunch of same size boxes in rows",
+    "grid of cards",
+    "equal boxes lined up",
+    "products shown in a grid"
+   ],
+   "one_line": "Equal-sized cards lined up in rows and columns.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='8' y='8' width='30' height='28' rx='3' fill='#eee' stroke='#bbb'/><rect x='45' y='8' width='30' height='28' rx='3' fill='#eee' stroke='#bbb'/><rect x='82' y='8' width='30' height='28' rx='3' fill='#eee' stroke='#bbb'/><rect x='8' y='44' width='30' height='28' rx='3' fill='#eee' stroke='#bbb'/><rect x='45' y='44' width='30' height='28' rx='3' fill='#eee' stroke='#bbb'/><rect x='82' y='44' width='30' height='28' rx='3' fill='#eee' stroke='#bbb'/></svg>"
+  },
+  {
+   "id": "sidebar",
+   "term": "Sidebar",
+   "category": "layout",
+   "says": [
+    "menu on the left side",
+    "a column on the side with links",
+    "side panel navigation",
+    "vertical menu next to the content"
+   ],
+   "one_line": "A narrow column beside the main content holds navigation.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='6' y='6' width='108' height='68'/><rect x='6' y='6' width='28' height='68' fill='#111'/><path d='M40 16L106 16' stroke='#bbb'/><path d='M40 28L106 28' stroke='#bbb'/><path d='M40 40L106 40' stroke='#bbb'/><path d='M40 52L86.2 52' stroke='#bbb'/><path d='M12 18L28 18' stroke='#eee'/><path d='M12 30L28 30' stroke='#eee'/><path d='M12 42L28 42' stroke='#eee'/></svg>"
+  },
+  {
+   "id": "sticky-header",
+   "term": "Sticky header",
+   "category": "layout",
+   "says": [
+    "the top bar stays when i scroll",
+    "menu follows me down the page",
+    "navigation always visible on top",
+    "header doesnt go away"
+   ],
+   "one_line": "The top bar stays visible while the page scrolls underneath.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='10' y='6' width='100' height='68'/><rect x='10' y='6' width='100' height='14' fill='#111'/><path d='M18 30L102 30' stroke='#bbb'/><path d='M18 40L102 40' stroke='#bbb'/><path d='M18 50L102 50' stroke='#bbb'/><path d='M18 60L76.8 60' stroke='#bbb'/><path d='M116 62L116 34M118.4 38.4L116 34L113.6 38.4'/></svg>"
+  },
+  {
+   "id": "mega-menu",
+   "term": "Mega menu",
+   "category": "layout",
+   "says": [
+    "big dropdown with lots of links",
+    "menu that opens a whole panel",
+    "dropdown with columns and pictures",
+    "huge menu"
+   ],
+   "one_line": "A large dropdown panel that shows many links in groups.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='8' y='8' width='104' height='12' fill='#111'/><rect x='8' y='24' width='104' height='46'/><path d='M16 32L36 32' stroke='#bbb'/><path d='M16 42L36 42' stroke='#bbb'/><path d='M16 52L30 52' stroke='#bbb'/><path d='M48 32L68 32' stroke='#bbb'/><path d='M48 42L68 42' stroke='#bbb'/><path d='M48 52L62 52' stroke='#bbb'/><rect x='80' y='32' width='26' height='30' fill='#eee' stroke='#bbb'/></svg>"
+  },
+  {
+   "id": "carousel",
+   "term": "Carousel",
+   "category": "layout",
+   "says": [
+    "pictures that slide side to side",
+    "swipe through slides",
+    "slideshow with arrows",
+    "banner that rotates"
+   ],
+   "one_line": "Slides sit side by side and move left or right.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='4' y='20' width='22' height='40' fill='#eee' stroke='#bbb'/><rect x='32' y='14' width='56' height='52'/><rect x='94' y='20' width='22' height='40' fill='#eee' stroke='#bbb'/><path d='M30 74L18 74M22.4 71.6L18 74L22.4 76.4'/><path d='M90 74L102 74M97.6 76.4L102 74L97.6 71.6'/><circle cx='54' cy='72' r='1'/><circle cx='60' cy='72' r='1' fill='#111'/><circle cx='66' cy='72' r='1'/></svg>"
+  },
+  {
+   "id": "tabs",
+   "term": "Tabs",
+   "category": "layout",
+   "says": [
+    "click a label to switch the content",
+    "buttons on top that change what shows",
+    "sections you flip between",
+    "tabbed menu"
+   ],
+   "one_line": "Labels on top switch which panel of content is shown.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='8' y='10' width='30' height='14' rx='3' fill='#111'/><rect x='40' y='10' width='30' height='14'/><rect x='72' y='10' width='30' height='14'/><rect x='8' y='24' width='104' height='46'/><path d='M18 36L78 36' stroke='#bbb'/><path d='M18 46L78 46' stroke='#bbb'/><path d='M18 56L60 56' stroke='#bbb'/></svg>"
+  },
+  {
+   "id": "accordion",
+   "term": "Accordion",
+   "category": "layout",
+   "says": [
+    "click to open and close sections",
+    "faq with dropdowns",
+    "rows that expand",
+    "collapsible list"
+   ],
+   "one_line": "A stack of headings that each expand to reveal more.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='10' y='8' width='100' height='14'/><rect x='10' y='26' width='100' height='30'/><rect x='10' y='60' width='100' height='14'/><path d='M94 12L98 18L102 12'/><path d='M18 36L78 36' stroke='#bbb'/><path d='M18 44L78 44' stroke='#bbb'/><path d='M18 52L60 52' stroke='#bbb'/><path d='M94 68L98 64L102 68'/></svg>"
+  },
+  {
+   "id": "modal",
+   "term": "Modal",
+   "category": "layout",
+   "says": [
+    "popup box in the middle of the screen",
+    "window that appears over the page",
+    "dark background with a box on top",
+    "dialog that blocks the page"
+   ],
+   "one_line": "A box that pops up over the page and asks for your attention.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='4' y='4' width='112' height='72' fill='#bbb'/><rect x='26' y='18' width='68' height='44' rx='4' fill='#fff' stroke='#111'/><rect x='66' y='48' width='22' height='8' rx='4' fill='#111'/><path d='M34 28L80 28' stroke='#bbb'/><path d='M34 36L70 36' stroke='#bbb'/><path d='M84 24L88 28'/></svg>"
+  },
+  {
+   "id": "drawer",
+   "term": "Drawer",
+   "category": "layout",
+   "says": [
+    "panel that slides in from the side",
+    "side menu that opens",
+    "slide out menu",
+    "hamburger menu panel"
+   ],
+   "one_line": "A panel slides in from the edge of the screen.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='6' y='6' width='108' height='68' fill='#eee' stroke='#bbb'/><rect x='64' y='6' width='50' height='68'/><path d='M40 40L62 40M57.6 42.4L62 40L57.6 37.6'/><path d='M72 18L106 18' stroke='#bbb'/><path d='M72 28L106 28' stroke='#bbb'/><path d='M72 38L106 38' stroke='#bbb'/><path d='M72 48L95.8 48' stroke='#bbb'/><path d='M10 14L22 14'/><path d='M10 20L22 20'/><path d='M10 26L22 26'/></svg>"
+  },
+  {
+   "id": "breadcrumb",
+   "term": "Breadcrumb",
+   "category": "layout",
+   "says": [
+    "little path at the top like home then shop",
+    "shows where i am in the site",
+    "trail of links back",
+    "home slash category"
+   ],
+   "one_line": "A trail of links showing where you are in the site.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='10' y='32' width='20' height='8' rx='3' fill='#111'/><path d='M36 32L42 36L36 40'/><rect x='48' y='32' width='24' height='8' rx='3' fill='#111'/><path d='M78 32L84 36L78 40'/><rect x='90' y='32' width='20' height='8' rx='3'/></svg>"
+  },
+  {
+   "id": "z-pattern",
+   "term": "Z-pattern",
+   "category": "layout",
+   "says": [
+    "eyes go across then diagonal then across",
+    "z shaped reading",
+    "layout that follows a z",
+    "top left to top right then bottom"
+   ],
+   "one_line": "A layout that guides the eye along a Z shape.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='8' y='6' width='104' height='68'/><path d='M18 18L98 18M93.6 20.4L98 18L93.6 15.6'/><path d='M98 18L22 60M24.7 55.8L22 60L27.0 60.0'/><path d='M22 60L98 60M93.6 62.4L98 60L93.6 57.6'/></svg>"
+  },
+  {
+   "id": "f-pattern",
+   "term": "F-pattern",
+   "category": "layout",
+   "says": [
+    "people read the top then down the left",
+    "f shaped reading",
+    "text heavy page scanning",
+    "scan across twice then down"
+   ],
+   "one_line": "A layout that follows how eyes scan text: across, across, then down.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='8' y='6' width='104' height='68'/><path d='M18 18L98 18M93.6 20.4L98 18L93.6 15.6'/><path d='M18 36L70 36M65.6 38.4L70 36L65.6 33.6'/><path d='M18 18L18 66M15.6 61.6L18 66L20.4 61.6'/></svg>"
+  },
+  {
+   "id": "whitespace",
+   "term": "Whitespace",
+   "category": "layout",
+   "says": [
+    "lots of empty space",
+    "room to breathe",
+    "not so crowded",
+    "clean and airy with space around things"
+   ],
+   "one_line": "Empty space around elements that makes a page feel calm and clear.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='6' y='6' width='108' height='68'/><rect x='42' y='30' width='36' height='6' fill='#111'/><rect x='48' y='42' width='24' height='4' fill='#bbb'/><path d='M14 14L36 14' stroke='#bbb'/><path d='M84 66L106 66' stroke='#bbb'/></svg>"
+  },
+  {
+   "id": "above-the-fold",
+   "term": "Above the fold",
+   "category": "layout",
+   "says": [
+    "what you see before scrolling",
+    "first screen of the page",
+    "the part visible right away",
+    "top part without scrolling"
+   ],
+   "one_line": "Everything visible before the visitor scrolls.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='10' y='6' width='100' height='68'/><path d='M10 40L110 40' stroke='#111'/><path d='M10 40L10 40'/><rect x='18' y='12' width='50' height='8' fill='#111'/><rect x='18' y='24' width='30' height='6' fill='#111'/><rect x='18' y='48' width='84' height='18' fill='#eee' stroke='#bbb'/><path d='M114 10L114 38M111.6 33.6L114 38L116.4 33.6'/></svg>"
+  },
+  {
+   "id": "glassmorphism",
+   "term": "Glassmorphism",
+   "category": "effect",
+   "says": [
+    "frosted glass look",
+    "see through blurry card",
+    "transparent panel with blur behind",
+    "like looking through foggy glass"
+   ],
+   "one_line": "A frosted, see-through panel that blurs what is behind it.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='36' cy='34' r='20' fill='#bbb'/><circle cx='84' cy='50' r='16' fill='#eee' stroke='#bbb'/><rect x='30' y='22' width='62' height='40' rx='8' fill='none'/><rect x='30' y='22' width='62' height='40' rx='8' fill='#fff' stroke='#111'/><path d='M40 34L74 34' stroke='#bbb'/><path d='M40 44L64 44' stroke='#bbb'/></svg>"
+  },
+  {
+   "id": "neumorphism",
+   "term": "Neumorphism",
+   "category": "effect",
+   "says": [
+    "soft puffy buttons",
+    "looks pressed out of the background",
+    "soft shadows that look 3d but flat",
+    "squishy embossed look"
+   ],
+   "one_line": "Soft raised or pressed shapes that look molded from the background.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='4' y='4' width='112' height='72' fill='#eee'/><rect x='24' y='22' width='72' height='36' rx='12' fill='#eee' stroke='#bbb'/><path d='M30 62L90 62' stroke='#bbb' stroke-width='4'/><path d='M26 20L80 20' stroke='#fff' stroke-width='3'/></svg>"
+  },
+  {
+   "id": "gradient-mesh",
+   "term": "Gradient mesh",
+   "category": "effect",
+   "says": [
+    "colors blending in blobs",
+    "soft blurry color background",
+    "aurora look",
+    "many colors melting together"
+   ],
+   "one_line": "Several soft colors melt together in blurry blobs.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='8' y='8' width='104' height='64'/><circle cx='36' cy='30' r='16' fill='#bbb' stroke='none'/><circle cx='76' cy='50' r='18' fill='#eee' stroke='none'/><circle cx='84' cy='24' r='10' fill='#bbb' stroke='none'/><path d='M14 56Q40 40 60 52T106 44' stroke='#bbb'/></svg>"
+  },
+  {
+   "id": "grain",
+   "term": "Grain texture",
+   "category": "effect",
+   "says": [
+    "grainy film look",
+    "noisy texture on the background",
+    "sandy speckles",
+    "retro rough texture"
+   ],
+   "one_line": "A fine speckle over the design that adds an analog, tactile feel.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='8' y='8' width='104' height='64' fill='#eee'/><path stroke-width='3' d='M18 18h0M34 26h0M52 14h0M70 30h0M92 20h0M24 44h0M46 52h0M64 46h0M84 58h0M100 40h0M30 64h0M76 66h0M56 32h0M14 34h0'/></svg>"
+  },
+  {
+   "id": "elevation",
+   "term": "Drop shadow and elevation",
+   "category": "effect",
+   "says": [
+    "shadow under the card",
+    "makes it look like its above the page",
+    "layers with soft shadows",
+    "box looks lifted off the page"
+   ],
+   "one_line": "Shadows that make elements look lifted at different heights.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='30' y='44' width='60' height='24' rx='3' fill='#eee' stroke='#bbb'/><rect x='24' y='34' width='60' height='24' rx='3' fill='#fff' stroke='#111'/><rect x='40' y='18' width='60' height='24' rx='3' fill='#fff' stroke='#111'/><path d='M46 46L90 46' stroke='#bbb' stroke-width='3'/></svg>"
+  },
+  {
+   "id": "backdrop-blur",
+   "term": "Backdrop blur",
+   "category": "effect",
+   "says": [
+    "the stuff behind is blurry",
+    "blurred background behind the menu",
+    "bar that blurs the page under it",
+    "soft focus behind a panel"
+   ],
+   "one_line": "Whatever sits behind a panel is blurred so the panel stays readable.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M8 14L112 14' stroke='#bbb'/><path d='M8 24L112 24' stroke='#bbb'/><path d='M8 34L112 34' stroke='#bbb'/><path d='M8 44L112 44' stroke='#bbb'/><path d='M8 54L112 54' stroke='#bbb'/><path d='M8 64L80.8 64' stroke='#bbb'/><rect x='8' y='30' width='104' height='22' fill='#eee' stroke='#111'/><path d='M20 41L70 41' stroke='#bbb' stroke-width='4'/></svg>"
+  },
+  {
+   "id": "duotone",
+   "term": "Duotone",
+   "category": "effect",
+   "says": [
+    "picture in just two colors",
+    "image tinted one color",
+    "photo with a color overlay",
+    "two tone image"
+   ],
+   "one_line": "An image reduced to just two colors.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='8' y='8' width='104' height='64'/><path d='M8 62L36 34L56 52L80 26L112 62Z' fill='#111' stroke='none'/><path d='M8 62L36 34L56 52L80 26L112 62L112 72L8 72Z' fill='#111' stroke='none'/><circle cx='88' cy='20' r='7' fill='#bbb' stroke='none'/></svg>"
+  },
+  {
+   "id": "glow",
+   "term": "Glow",
+   "category": "effect",
+   "says": [
+    "soft light coming off the button",
+    "neon look",
+    "shining edge",
+    "things that look lit up"
+   ],
+   "one_line": "A soft halo of light around an element.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='30' y='24' width='60' height='32' rx='16' fill='#eee' stroke='#bbb'/><rect x='38' y='30' width='44' height='20' rx='10' fill='#111'/><path d='M60 6L60 14' stroke='#bbb'/><path d='M26 14L30 20' stroke='#bbb'/><path d='M94 14L90 20' stroke='#bbb'/><path d='M60 66L60 74' stroke='#bbb'/></svg>"
+  },
+  {
+   "id": "outline-text",
+   "term": "Outline text",
+   "category": "effect",
+   "says": [
+    "letters with only a border",
+    "hollow text",
+    "text that is see through with a line around",
+    "stroke text"
+   ],
+   "one_line": "Letters drawn as an outline with no fill.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M14 62L28 18L42 62M19 48H37'/><path d='M54 18V62H74Q82 62 82 54V50Q82 42 74 42H54M54 42H72Q78 42 78 34V28Q78 18 70 18H54'/><path d='M92 18H110M101 18V62' stroke='#bbb'/></svg>"
+  },
+  {
+   "id": "vignette",
+   "term": "Vignette",
+   "category": "effect",
+   "says": [
+    "dark corners on the picture",
+    "edges fade to dark",
+    "spotlight in the middle",
+    "darker around the border"
+   ],
+   "one_line": "Edges of an image fade darker to pull focus to the center.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='8' y='8' width='104' height='64' fill='#111'/><path d='M24 14H96Q108 14 108 26V54Q108 66 96 66H24Q12 66 12 54V26Q12 14 24 14Z' fill='#bbb' stroke='none'/><rect x='32' y='24' width='56' height='32' rx='14' fill='#eee' stroke='none'/></svg>"
+  },
+  {
+   "id": "serif-sans",
+   "term": "Serif vs sans-serif",
+   "category": "type",
+   "says": [
+    "letters with little feet",
+    "fancy newspaper letters versus plain ones",
+    "classic vs modern font",
+    "the little tails on letters"
+   ],
+   "one_line": "Serif letters have small feet. Sans-serif letters are plain and clean.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M14 18L14 62'/><path d='M8 18L20 18'/><path d='M8 62L20 62'/><path d='M34 18L34 62'/><path d='M60 18L60 62' stroke='#bbb'/><path d='M86 18L86 62' stroke='#bbb'/><path d='M66 18L66 18'/><path d='M96 62V18H104' stroke='#bbb'/><path d='M46 8L46 72' stroke='#eee' stroke-width='1'/></svg>"
+  },
+  {
+   "id": "display-font",
+   "term": "Display font",
+   "category": "type",
+   "says": [
+    "big fancy font for headlines",
+    "eye catching title letters",
+    "font with personality for the title",
+    "decorative heading font"
+   ],
+   "one_line": "A bold, characterful font meant for large headlines.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='12' y='14' width='14' height='52' fill='#111'/><rect x='30' y='14' width='28' height='14' fill='#111'/><rect x='30' y='28' width='20' height='10' fill='#111'/><rect x='30' y='52' width='28' height='14' fill='#111'/><rect x='62' y='14' width='14' height='52' fill='#111'/><rect x='80' y='14' width='28' height='14' fill='#111'/><rect x='94' y='28' width='14' height='38' fill='#111'/></svg>"
+  },
+  {
+   "id": "kerning",
+   "term": "Kerning",
+   "category": "type",
+   "says": [
+    "space between two letters is weird",
+    "letters too close or too far",
+    "gap between certain letters",
+    "uneven spacing in a word"
+   ],
+   "one_line": "The space between one specific pair of letters.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='14' y='22' width='8' height='36' fill='#111'/><rect x='22' y='22' width='20' height='8' fill='#111'/><rect x='22' y='50' width='20' height='8' fill='#111'/><rect x='60' y='22' width='8' height='36' fill='#111'/><rect x='80' y='22' width='8' height='36' fill='#111'/><path d='M70 66L78 66M73.6 68.4L78 66L73.6 63.6'/><path d='M78 66L70 66M74.4 63.6L70 66L74.4 68.4'/><rect x='94' y='22' width='8' height='36' fill='#111'/><path d='M60 14L88 14' stroke='#bbb'/></svg>"
+  },
+  {
+   "id": "tracking",
+   "term": "Tracking",
+   "category": "type",
+   "says": [
+    "space between all the letters",
+    "letters spread out",
+    "wide spaced text",
+    "tighter letter spacing overall"
+   ],
+   "one_line": "The even spacing across all letters in a line of text.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='10' y='22' width='6' height='24' fill='#111'/><rect x='26' y='22' width='6' height='24' fill='#111'/><rect x='42' y='22' width='6' height='24' fill='#111'/><rect x='58' y='22' width='6' height='24' fill='#111'/><rect x='74' y='22' width='6' height='24' fill='#111'/><rect x='90' y='22' width='6' height='24' fill='#111'/><path d='M10 60L100 60M95.6 62.4L100 60L95.6 57.6'/><path d='M100 60L10 60M14.4 57.6L10 60L14.4 62.4'/></svg>"
+  },
+  {
+   "id": "leading",
+   "term": "Leading (line spacing)",
+   "category": "type",
+   "says": [
+    "space between lines of text",
+    "lines too squished together",
+    "line height",
+    "paragraph feels cramped"
+   ],
+   "one_line": "The vertical gap between lines of text.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M10 14L80 14' stroke='#111'/><path d='M10 28L80 28' stroke='#111'/><path d='M10 42L59 42' stroke='#111'/><path d='M96 14L96 28M93.6 23.6L96 28L98.4 23.6'/><path d='M96 28L96 14M98.4 18.4L96 14L93.6 18.4'/><path d='M96 28L96 42M93.6 37.6L96 42L98.4 37.6'/><path d='M96 42L96 28M98.4 32.4L96 28L93.6 32.4'/></svg>"
+  },
+  {
+   "id": "type-hierarchy",
+   "term": "Type hierarchy",
+   "category": "type",
+   "says": [
+    "clear big title then smaller text",
+    "what to read first is obvious",
+    "headings and body sizes",
+    "important text stands out more"
+   ],
+   "one_line": "Different text sizes and weights show what matters most.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='12' y='12' width='70' height='14' fill='#111'/><rect x='12' y='34' width='50' height='7' fill='#999'/><rect x='12' y='48' width='90' height='4' fill='#eee' stroke='#bbb'/><rect x='12' y='56' width='90' height='4' fill='#eee' stroke='#bbb'/><rect x='12' y='64' width='60' height='4' fill='#eee' stroke='#bbb'/></svg>"
+  },
+  {
+   "id": "all-caps",
+   "term": "All caps",
+   "category": "type",
+   "says": [
+    "every letter is capital",
+    "uppercase text",
+    "shouty small headings",
+    "capital letters only"
+   ],
+   "one_line": "Text set entirely in capital letters.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M10 58L22 18L34 58M15 46H29'/><path d='M44 58V18M44 18H62M44 38H58M44 58H62'/><path d='M72 58L72 18L96 58L96 18'/><path d='M10 68L100 68' stroke='#bbb'/></svg>"
+  },
+  {
+   "id": "variable-font",
+   "term": "Variable font",
+   "category": "type",
+   "says": [
+    "font that goes from thin to bold smoothly",
+    "weight slider for the font",
+    "one font with many thicknesses",
+    "letters that change weight"
+   ],
+   "one_line": "One font file that slides smoothly between thin and bold.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M14 18L14 62' stroke-width='2'/><path d='M36 18L36 62' stroke-width='4'/><path d='M58 18L58 62' stroke-width='7'/><path d='M82 18L82 62' stroke-width='10'/><path d='M14 72L100 72M95.6 74.4L100 72L95.6 69.6'/></svg>"
+  },
+  {
+   "id": "monospace",
+   "term": "Monospace",
+   "category": "type",
+   "says": [
+    "every letter takes the same width",
+    "code looking font",
+    "typewriter style letters",
+    "hacker terminal text"
+   ],
+   "one_line": "A font where every letter takes the same width, like code.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='8' y='10' width='104' height='60'/><path stroke-width='8' d='M22 28h28M22 44h40M22 28v0' stroke-dasharray='6 6'/><path d='M18 58L40 58' stroke='#bbb'/></svg>"
+  },
+  {
+   "id": "monochrome",
+   "term": "Monochrome",
+   "category": "color",
+   "says": [
+    "black and white only",
+    "one color in different shades",
+    "no other colors",
+    "grayscale look"
+   ],
+   "one_line": "A design built from a single color in different shades.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='10' y='14' width='22' height='52' fill='#111'/><rect x='36' y='14' width='22' height='52' fill='#555'/><rect x='62' y='14' width='22' height='52' fill='#999'/><rect x='88' y='14' width='22' height='52' fill='#eee' stroke='#bbb'/></svg>"
+  },
+  {
+   "id": "accent-color",
+   "term": "Accent color",
+   "category": "color",
+   "says": [
+    "one pop of color on a plain page",
+    "a highlight color for buttons",
+    "everything calm except one thing",
+    "the one bright color"
+   ],
+   "one_line": "One bold color used sparingly to draw the eye.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='10' y='10' width='100' height='12' fill='#eee' stroke='#bbb'/><rect x='10' y='28' width='100' height='12' fill='#eee' stroke='#bbb'/><rect x='10' y='46' width='60' height='12' fill='#eee' stroke='#bbb'/><rect x='10' y='62' width='36' height='12' rx='6' fill='#111'/><circle cx='100' cy='66' r='6' fill='#111'/></svg>"
+  },
+  {
+   "id": "dark-mode",
+   "term": "Dark mode",
+   "category": "color",
+   "says": [
+    "black background version",
+    "easy on the eyes at night",
+    "dark theme",
+    "light and dark switch"
+   ],
+   "one_line": "A dark-background version of the interface.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='8' y='10' width='46' height='60'/><rect x='66' y='10' width='46' height='60' fill='#111'/><path d='M14 22L46 22' stroke='#bbb'/><path d='M14 32L46 32' stroke='#bbb'/><path d='M14 42L36.4 42' stroke='#bbb'/><path d='M72 22L104 22' stroke='#bbb'/><path d='M72 32L104 32' stroke='#bbb'/><path d='M72 42L94 42' stroke='#bbb'/><path d='M56 40L64 40M59.6 42.4L64 40L59.6 37.6'/></svg>"
+  },
+  {
+   "id": "high-contrast",
+   "term": "High contrast",
+   "category": "color",
+   "says": [
+    "easy to read strong colors",
+    "text really stands out from the background",
+    "very clear black on white",
+    "not washed out"
+   ],
+   "one_line": "Strong difference between text and background so it is easy to read.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='8' y='10' width='50' height='60' fill='#111'/><rect x='62' y='10' width='50' height='60' fill='#eee'/><path d='M16 30L50 30' stroke='#eee' stroke-width='4'/><path d='M16 44L42 44' stroke='#eee' stroke-width='4'/><path d='M70 30L104 30' stroke='#111' stroke-width='4'/><path d='M70 44L96 44' stroke='#111' stroke-width='4'/></svg>"
+  },
+  {
+   "id": "pastel",
+   "term": "Pastel colors",
+   "category": "color",
+   "says": [
+    "soft light colors",
+    "baby pink and baby blue vibes",
+    "gentle muted tones",
+    "candy colors but calm"
+   ],
+   "one_line": "Soft, light, low-intensity colors.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='8' y='22' width='24' height='36' rx='12' fill='#eee' stroke='#bbb'/><rect x='36' y='22' width='24' height='36' rx='12' fill='#fff' stroke='#bbb'/><rect x='64' y='22' width='24' height='36' rx='12' fill='#eee' stroke='#bbb'/><rect x='92' y='22' width='20' height='36' rx='10' fill='#fff' stroke='#bbb'/><path d='M8 68L112 68' stroke='#eee'/></svg>"
+  },
+  {
+   "id": "brand-palette",
+   "term": "Brand color palette",
+   "category": "color",
+   "says": [
+    "our set of colors",
+    "the colors that match the logo",
+    "same colors everywhere",
+    "color scheme for the whole site"
+   ],
+   "one_line": "A small fixed set of colors used across everything.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='26' cy='40' r='14' fill='#111'/><circle cx='54' cy='40' r='14' fill='#555'/><circle cx='82' cy='40' r='14' fill='#bbb'/><circle cx='108' cy='40' r='6' fill='#eee' stroke='#bbb'/><path d='M12 66L108 66' stroke='#bbb'/></svg>"
+  },
+  {
+   "id": "gradient",
+   "term": "Gradient",
+   "category": "color",
+   "says": [
+    "color that fades into another",
+    "smooth blend from one color to the next",
+    "ombre background",
+    "fade from dark to light"
+   ],
+   "one_line": "A smooth blend from one color into another.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='8' y='14' width='25' height='52' fill='#111'/><rect x='33' y='14' width='25' height='52' fill='#555'/><rect x='58' y='14' width='25' height='52' fill='#999'/><rect x='83' y='14' width='29' height='52' fill='#eee' stroke='#bbb'/><path d='M14 72L106 72M101.6 74.4L106 72L101.6 69.6'/></svg>"
+  },
+  {
+   "id": "cta-button",
+   "term": "CTA button",
+   "category": "component",
+   "says": [
+    "the main button i want people to click",
+    "big button that says sign up",
+    "call to action",
+    "button that stands out"
+   ],
+   "one_line": "The main button that asks the visitor to take the key action.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='26' y='28' width='68' height='24' rx='12' fill='#111'/><path d='M40 40L78 40' stroke='#eee' stroke-width='4'/><path d='M100 60L100 74L104 70L108 76L111 74L107 68L113 67Z' fill='#111'/></svg>"
+  },
+  {
+   "id": "badge",
+   "term": "Badge or pill",
+   "category": "component",
+   "says": [
+    "small rounded label like new",
+    "little tag on a card",
+    "tiny status bubble",
+    "capsule shaped label"
+   ],
+   "one_line": "A small rounded label that tags or labels something.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='18' y='14' width='84' height='52' rx='4' fill='#eee' stroke='#bbb'/><rect x='26' y='22' width='32' height='14' rx='7' fill='#111'/><path d='M26 46L90 46' stroke='#bbb'/><path d='M26 56L70 56' stroke='#bbb'/><rect x='66' y='22' width='28' height='14' rx='7' fill='none'/></svg>"
+  },
+  {
+   "id": "toast",
+   "term": "Toast notification",
+   "category": "component",
+   "says": [
+    "small message that pops up and disappears",
+    "saved message at the corner",
+    "quick notification",
+    "little popup at the bottom"
+   ],
+   "one_line": "A small message that appears briefly and fades away.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='6' y='6' width='108' height='68' fill='#eee' stroke='#bbb'/><rect x='54' y='50' width='56' height='18' rx='4' fill='#fff' stroke='#111'/><path d='M60 59L63 62L69 55'/><path d='M74 59L102 59' stroke='#bbb'/><path d='M30 74L30 66M32.4 70.4L30 66L27.6 70.4'/></svg>"
+  },
+  {
+   "id": "tooltip",
+   "term": "Tooltip",
+   "category": "component",
+   "says": [
+    "little box that shows when i hover",
+    "hint bubble",
+    "explains the icon on hover",
+    "tiny text bubble over a button"
+   ],
+   "one_line": "A small hint bubble that appears when you hover on something.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='36' y='48' width='48' height='20' rx='4' fill='#111'/><rect x='28' y='12' width='64' height='24' rx='4' fill='#fff' stroke='#111'/><path d='M52 36L60 44L68 36'/><path d='M38 24L82 24' stroke='#bbb'/></svg>"
+  },
+  {
+   "id": "avatar-stack",
+   "term": "Avatar stack",
+   "category": "component",
+   "says": [
+    "overlapping profile pictures",
+    "row of little faces",
+    "people circles bunched together",
+    "who joined shown as circles"
+   ],
+   "one_line": "Overlapping profile circles that show a group of people.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='26' cy='40' r='14' fill='#eee' stroke='#111'/><circle cx='46' cy='40' r='14' fill='#fff' stroke='#111'/><circle cx='66' cy='40' r='14' fill='#bbb' stroke='#111'/><circle cx='86' cy='40' r='14' fill='#111' stroke='#fff'/><path d='M92 40L92 40'/></svg>"
+  },
+  {
+   "id": "empty-state",
+   "term": "Empty state",
+   "category": "component",
+   "says": [
+    "what it shows when theres nothing yet",
+    "blank page with a friendly message",
+    "no results screen",
+    "empty list placeholder"
+   ],
+   "one_line": "The friendly screen shown when there is nothing to display yet.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M28 34H40L46 42H74L80 34H92V62H28Z' fill='#eee' stroke='#bbb'/><rect x='8' y='6' width='104' height='68'/><rect x='42' y='64' width='36' height='6' rx='3' fill='#111'/><path d='M40 18L80 18' stroke='#bbb'/></svg>"
+  },
+  {
+   "id": "progress-bar",
+   "term": "Progress bar",
+   "category": "component",
+   "says": [
+    "bar that fills up as i go",
+    "shows how far along it is",
+    "loading line",
+    "percent complete strip"
+   ],
+   "one_line": "A bar that fills to show how far along something is.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='10' y='32' width='100' height='16' rx='8' fill='#eee' stroke='#bbb'/><rect x='10' y='32' width='62' height='16' rx='8' fill='#111'/><path d='M76 60L100 60M95.6 62.4L100 60L95.6 57.6'/></svg>"
+  },
+  {
+   "id": "stepper",
+   "term": "Stepper",
+   "category": "component",
+   "says": [
+    "steps one two three at the top",
+    "numbered stages of a form",
+    "shows which step im on",
+    "multi step progress dots"
+   ],
+   "one_line": "A row of numbered steps showing where you are in a process.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='20' cy='40' r='8' fill='#111'/><path d='M28 40L46 40'/><circle cx='54' cy='40' r='8' fill='#111'/><path d='M62 40L80 40' stroke='#bbb'/><circle cx='88' cy='40' r='8' fill='#eee' stroke='#bbb'/><path d='M96 40L104 40' stroke='#bbb'/></svg>"
+  },
+  {
+   "id": "toggle",
+   "term": "Toggle switch",
+   "category": "component",
+   "says": [
+    "on off slider",
+    "little switch you flip",
+    "button that slides left and right",
+    "turn something on or off"
+   ],
+   "one_line": "A small switch that flips a setting on or off.",
+   "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80' fill='none' stroke='#111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='14' y='18' width='44' height='22' rx='11' fill='#eee' stroke='#bbb'/><circle cx='26' cy='29' r='8' fill='#fff' stroke='#bbb'/><rect x='14' y='46' width='44' height='22' rx='11' fill='#111'/><circle cx='46' cy='57' r='8' fill='#fff' stroke='none'/><path d='M70 29L104 29M99.6 31.4L104 29L99.6 26.6'/><path d='M104 57L70 57M74.4 54.6L70 57L74.4 59.4'/></svg>"
+  }
+ ]
+}

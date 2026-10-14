@@ -1,0 +1,172 @@
+{
+  "version": 1,
+  "_doc": "English tells for wdym triage. Every pattern is a JavaScript regex compiled case-insensitive. Weights add up to an ambiguity score; anchors subtract. A pack (references/packs.md) can add tells, verdict words, classes and readings on top of these.",
+  "thresholds": {
+    "check": 2,
+    "ask": 3,
+    "step": 0.5,
+    "bounds": {
+      "check": [
+        1.5,
+        4
+      ],
+      "ask": [
+        2.5,
+        5
+      ]
+    }
+  },
+  "budget": {
+    "window": 3,
+    "max_cards": 1
+  },
+  "type": {
+    "explain": "^\\s*(wdym|wym|what do you mean|what did you mean)\\b",
+    "wondering": "^\\s*(?:hey\\s+|so\\s+|ok(?:ay)?\\s+|hmm+\\s+|wait\\s+)?(why|what|how|when|where|who|whose|is|are|was|were|(?:do|did)\\s+(?:you|we|i|they)\\b|does\\s+(?:it|this|that|the|he|she|anyone)\\b|has|have|explain|im just wondering|i'm just wondering|just wondering|curious|is there|are there)\\b",
+    "deciding": "\\b(should (?:we|i)|which (?:one|is|should|would)|what do you think|wdyt|thoughts\\?|\\bvs\\.?\\b|versus|or should|better to|pick (?:one|between)|would you recommend|do you recommend)\\b",
+    "building": "\\b(build|make|create|add|fix|change|update|remove|delete|implement|write|refactor|deploy|ship|set ?up|install|move|rename|design|redesign|edit|convert|generate|run|let'?s|lets|do it|start|finish|publish|post|send|clean ?up|improve|optimi[sz]e|i want|i need|we need|can you|could you|please|go ahead)\\b"
+  },
+  "tells": [
+    {
+      "id": "ykwim",
+      "w": 3,
+      "re": "\\b(you know what i mean|u know what i mean|ykwim|if you know what i mean|you get me|you know the vibe|you know the one)\\b",
+      "cls": "reference"
+    },
+    {
+      "id": "i-mean",
+      "w": 1,
+      "re": "\\bi mean\\b"
+    },
+    {
+      "id": "vague-goal",
+      "w": 2,
+      "re": "\\b(make it better|better|improve|nicer|cleaner|clean it up|premium|polish(?:ed)?|optimi[sz]e|upgrade|level up|make it pop|pop more|modern(?:ize)?|sleek|more professional|fancier|cooler|more (?:alive|dynamic|engaging|fun|interesting)|enhance|fix it|make it work|looks? off|feels? off|not quite right|something'?s off|spice it up)\\b"
+    },
+    {
+      "id": "dangling",
+      "w": 2,
+      "re": "\\b(that one|the one (?:we|you|i)|like before|like last time|same as (?:before|last time)|as you know|remember (?:the|that|when|how)|the thing|that thing|do it again|like we did|you know which)\\b",
+      "cls": "reference"
+    },
+    {
+      "id": "like-that",
+      "w": 1.5,
+      "re": "\\b(like that|kinda like|kind of like|something like|similar to|in the style of|the vibe of|the feel of|same vibe)\\b",
+      "cls": "add-vs-replace"
+    },
+    {
+      "id": "described-look",
+      "w": 0.5,
+      "re": "\\b(look|looks|feel|feels|vibe|aesthetic|style|animation|animated|motion|effect|moves?|moving|floating|glow(?:ing)?|smooth)\\b",
+      "cls": "design"
+    },
+    {
+      "id": "short-vague",
+      "w": 1.5,
+      "computed": "a building prompt of 6 words or fewer whose only object is it, this, that or them, with no anchor"
+    },
+    {
+      "id": "dump",
+      "w": 1,
+      "computed": "over 120 words with 3 or more separate asks (also, and also, plus, then, another thing)"
+    },
+    {
+      "id": "no-done",
+      "w": 0.5,
+      "computed": "a building prompt with no acceptance words and no anchor"
+    }
+  ],
+  "anchors": [
+    {
+      "id": "url",
+      "w": -1.5,
+      "re": "https?://"
+    },
+    {
+      "id": "path",
+      "w": -1,
+      "re": "(~/|/Users/|\\./|\\b[\\w.-]+\\.(py|js|mjs|cjs|ts|tsx|jsx|md|json|html|css|scss|sh|yml|yaml|toml|sql|go|rs|swift|kt|java|rb|php)\\b)"
+    },
+    {
+      "id": "image",
+      "w": -1.5,
+      "re": "\\[image|\\.(png|jpe?g|gif|webp|mp4|mov|svg)\\b"
+    },
+    {
+      "id": "ticket",
+      "w": -1,
+      "re": "\\b(task|issue|pr|ticket|bug)[- #]?\\d+\\b|#\\d{2,}\\b"
+    },
+    {
+      "id": "number",
+      "w": -0.5,
+      "re": "\\b\\d+(\\.\\d+)?\\s?(px|ms|s|sec|secs|seconds|%|kb|mb|gb|x|rem|em|fps|k|words|lines|items|rows|columns|pages|minutes|mins|hours)\\b"
+    },
+    {
+      "id": "quoted",
+      "w": -0.5,
+      "re": "\"[^\"]{4,}\"|`[^`]{2,}`"
+    },
+    {
+      "id": "done-when",
+      "w": -1,
+      "re": "\\b(done when|acceptance|should (?:return|show|print|output|equal)|expected (?:output|result)|so that|until it|must (?:return|show|pass))\\b"
+    }
+  ],
+  "cost": [
+    {
+      "id": "outward",
+      "re": "\\b(publish|post|tweet|send|email|deploy|release|push to|launch|go live|make (?:it )?public|client|customer|announce|submit)\\b"
+    },
+    {
+      "id": "money",
+      "re": "\\b(pay|buy|purchase|price|pricing|budget|invoice|charge|subscription|refund|billing)\\b|[$€£]\\s?\\d"
+    },
+    {
+      "id": "destructive",
+      "re": "\\b(delete|remove|drop|wipe|reset|overwrite|purge|force|migrate|rename (?:all|every))\\b"
+    },
+    {
+      "id": "taste",
+      "re": "\\b(design|logo|brand|hero|landing|ui|ux|layout|colou?r|font|typography|animation|motion|video|thumbnail|copy|headline|caption|tone)\\b"
+    },
+    {
+      "id": "big",
+      "re": "\\b(all of|every|entire|whole|rebuild|redesign|rewrite|from scratch|everything)\\b"
+    }
+  ],
+  "ask_costs": [
+    "outward",
+    "money",
+    "destructive",
+    "taste"
+  ],
+  "delegate": "\\b(up to you|your call|you decide|whatever you think|surprise me|dealer'?s choice|you choose|you pick)\\b",
+  "verdict": {
+    "miss": "\\b(i meant|that'?s not what i|not what i (?:meant|asked|wanted|said)|you misunderstood|misunderstood|wrong (?:one|thing|file|page|section|part)|not that one|i said|i asked for|i didn'?t ask|i did not ask|no,? i (?:want|need|meant)|not like that|that'?s not it|you got it wrong|read (?:it|my message) again)\\b",
+    "broken": "\\b(still (?:broken|not working|failing|wrong)|not working|doesn'?t work|does not work|not done|you said (?:it was )?done|that'?s wrong|it'?s broken|crash(?:es|ed)?)\\b",
+    "yes": "^\\s*(yes|yep|yeah|yup|ok(?:ay)?|go|go ahead|do it|exactly|perfect|correct|right|sounds good|lgtm|ship it|nice|great)\\b"
+  },
+  "classes": {
+    "design": "\\b(design|look|feel|vibe|style|colou?r|font|animation|motion|hero|layout|ui|landing|page|logo|theme|spacing|card)\\b",
+    "scope": "\\b(all|every|each|only|just|whole|entire|everything|one of)\\b",
+    "add-vs-replace": "\\b(like that|kinda like|instead|replace|swap|add|keep)\\b",
+    "reference": "\\b(that one|the one|remember|last time|before|again)\\b",
+    "who-does-it": "\\b(you do|for me|i'?ll do|myself|you handle)\\b",
+    "audience": "\\b(public|internal|client|private|team|customers?|users?)\\b",
+    "channel": "\\b(email|slack|telegram|whatsapp|sms|linkedin|instagram|facebook|twitter|x\\.com|discord)\\b",
+    "copy": "\\b(caption|post|copy|headline|wording|tagline|bio|message)\\b"
+  },
+  "coach": {
+    "ykwim": "Say which picture you mean: paste a link or screenshot, or name the file.",
+    "i-mean": "Restate it as one sentence that starts with the result you want.",
+    "vague-goal": "Replace 'better' with what better means: a number, a reference, or 'done when ...'.",
+    "dangling": "Name the thing: the file, the link, or the date it happened.",
+    "like-that": "Say which part of the reference you like, and what stays the same.",
+    "described-look": "Describe the look, then let wdym show you the named options to tap.",
+    "short-vague": "Add the object: what should change, and where.",
+    "dump": "Lead with the one result that matters most, then list the rest.",
+    "no-done": "End with one 'done when' line so the agent knows when to stop."
+  }
+}

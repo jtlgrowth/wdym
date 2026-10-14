@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "wdym",
+  "description": "Reads a vague prompt before the work runs: one card with a rewritten brief, then the build. Clear prompts run untouched. Learns which phrasings it misreads for you. Zero dependencies.",
+  "version": "1.0.0",
+  "author": {
+    "name": "JTL Growth",
+    "url": "https://github.com/jtlgrowth"
+  },
+  "homepage": "https://github.com/jtlgrowth/wdym",
+  "repository": "https://github.com/jtlgrowth/wdym",
+  "license": "MIT",
+  "keywords": [
+    "prompts",
+    "clarify",
+    "intent",
+    "hooks",
+    "claude-code",
+    "codex",
+    "skills"
+  ]
+}
