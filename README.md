@@ -3,6 +3,11 @@
 **Your coding agent asks "is this it?" before it builds the wrong thing.**
 
 [![ci](https://github.com/jtlgrowth/wdym/actions/workflows/ci.yml/badge.svg)](https://github.com/jtlgrowth/wdym/actions/workflows/ci.yml)
+[![release](https://img.shields.io/github/v/release/jtlgrowth/wdym?label=release&color=111111)](https://github.com/jtlgrowth/wdym/releases)
+[![license: MIT](https://img.shields.io/badge/license-MIT-111111)](LICENSE)
+[![dependencies: 0](https://img.shields.io/badge/dependencies-0-111111)](package.json)
+[![node 18+](https://img.shields.io/badge/node-18%2B-111111)](https://nodejs.org)
+[![works in Claude Code and Codex](https://img.shields.io/badge/works%20in-Claude%20Code%20%2B%20Codex-111111)](#install)
 
 <p align="center">
   <img src="assets/wdym-demo.gif" width="800" alt="A vague prompt gets one card with a rewritten brief. One tap, then the build runs on the right reading.">
